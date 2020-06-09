@@ -4,7 +4,6 @@
 Class WorldsWealthiestPeople::Person 
 
 #attributes from the website we will be using to return an array of data in the @@all:
-#source of wealth and description will have their own methods 
 attr_accessor :name, :rank, :net_worth, :age, :citizenship, :industry, :source_of_wealth, :description
 
 @@all = []  #add newly created wealthy person with attributes to Person Class
@@ -22,13 +21,15 @@ attr_accessor :name, :rank, :net_worth, :age, :citizenship, :industry, :source_o
   end
 
 
-def initialize(name=nil, rank=nil, net_worth=nil, age=nil, citizenship=nil, industry=nil)
+def initialize(name=nil, rank=nil, net_worth=nil, age=nil, citizenship=nil, industry=nil, source_of_wealth=nil)
 @name = name
 @rank = rank 
 @net_worth = net_worth 
 @age = age 
 @citizenship = citizenship
 @industry = industry 
+@source_of_wealth = source_of_wealth
+@description = description 
 save 
 end 
 
@@ -54,14 +55,6 @@ end
 # b = 20
 # a ||= b
 # a # => 20
-
-def source_of_wealth 
-@source_of_wealth = 
-end 
-
-def description
-@description = 
-end 
 
 def doc 
   @doc ||= Nokogiri::HTML(open(self.url))
