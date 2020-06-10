@@ -21,7 +21,7 @@ attr_accessor :name, :rank, :net_worth, :age, :citizenship, :industry, :source_o
   end
 
 
-def initialize(name=nil, rank=nil, net_worth=nil, age=nil, citizenship=nil, industry=nil, source_of_wealth=nil)
+def initialize(name=nil, rank=nil, net_worth=nil, age=nil, citizenship=nil, industry=nil, source_of_wealth=nil, description=nil)
 @name = name
 @rank = rank 
 @net_worth = net_worth 
